@@ -1,0 +1,43 @@
+type TokenMineFactory @entity {
+  # factory address
+  id: ID!
+}
+
+type Vault @entity {
+  # vaultId
+  id: ID!
+  manager: Bytes
+  asset: Asset
+  xToken: XToken
+
+  negateEligibility: Boolean!
+  eligibilities: [BigInt!]
+  holdings: [BigInt!]
+  isFinalized: Boolean!
+  isClosed: Boolean!
+  flipEligOnRedeem: Boolean!
+  allowMintRequests: Boolean!
+  
+  # creation stats
+  createdAtTimestamp: BigInt!
+  createdAtBlockNumber: BigInt!
+}
+
+type Asset @entity {
+  # nft address
+  id: ID!
+
+  # mirrored from the smart contract
+  symbol: String!
+  name: String!
+}
+
+type XToken @entity {
+  # xtoken address
+  id: ID!
+
+  # mirrored from the smart contract
+  symbol: String!
+  name: String!
+  totalSupply: BigInt!
+}

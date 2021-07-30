@@ -1,0 +1,59 @@
+specVersion: 0.0.2
+description: A community-owned protocol for NFT index funds on NewChain
+repository: https://github.com/newswap/nftx
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: XStore
+    # testnet/mainnet
+    network: testnet   
+    # testnet : 0xd7586cA51Ac9c1008C3eC94f999A1208E2F3e1B2  startBlock: 3853531
+    # mainnet :   startBlock: 
+    source:
+      address: '0xd7586cA51Ac9c1008C3eC94f999A1208E2F3e1B2'
+      abi: XStore
+      startBlock: 3853531
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      file: ./src/mappings/xstore.ts
+      entities:
+        - Vault
+        - Asset
+        - XToken
+      abis:
+        - name: NFTX
+          file: ./abis/NFTX.json
+        - name: XStore
+          file: ./abis/XStore.json
+        - name: Pair
+          file: ./abis/pair.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: ERC20SymbolBytes
+          file: ./abis/ERC20SymbolBytes.json
+        - name: ERC20NameBytes
+          file: ./abis/ERC20NameBytes.json
+      eventHandlers:
+        - event: NewVaultAdded(indexed uint256)
+          handler: handleNewVaultAdded
+        - event: XTokenAddressSet(indexed uint256,address)
+          handler: handleXTokenAddressSet
+        - event: NftAddressSet(indexed uint256,address)
+          handler: handleNftAddressSet
+        - event: NegateEligibilitySet(indexed uint256,bool)
+          handler: handleNegateEligibilitySet
+        - event: ManagerSet(indexed uint256,address)
+          handler: handleManagerSet
+        - event: HoldingsAdded(indexed uint256,uint256)
+          handler: handleHoldingsAdded
+        - event: HoldingsRemoved(indexed uint256,uint256)
+          handler: handleHoldingsRemoved
+        - event: IsEligibleSet(indexed uint256,uint256,bool)
+          handler: handleIsEligibleSet
+        - event: IsFinalizedSet(indexed uint256,bool)
+          handler: handleIsFinalizedSet
+        - event: IsClosedSet(indexed uint256,bool)
+          handler: handleIsClosedSet
