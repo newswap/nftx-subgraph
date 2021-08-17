@@ -16,8 +16,10 @@ type Vault @entity {
   isFinalized: Boolean!
   isClosed: Boolean!
   flipEligOnRedeem: Boolean!
-  allowMintRequests: Boolean!
-  
+  is1155: Boolean!
+  rangeStart: BigInt!
+  rangeEnd: BigInt!
+
   # creation stats
   createdAtTimestamp: BigInt!
   createdAtBlockNumber: BigInt!

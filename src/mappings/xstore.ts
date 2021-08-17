@@ -1,7 +1,7 @@
 /* eslint-disable prefer-const */
 import { log, EthereumBlock, BigInt } from '@graphprotocol/graph-ts'
 import { Vault, Asset, XToken } from '../types/schema'
-import { NewVaultAdded, XTokenAddressSet, NftAddressSet, NegateEligibilitySet, ManagerSet, HoldingsAdded, HoldingsRemoved, IsEligibleSet, IsFinalizedSet, IsClosedSet} from '../types/XStore/XStore'
+import { NewVaultAdded, XTokenAddressSet, NftAddressSet, NegateEligibilitySet, ManagerSet, HoldingsAdded, HoldingsRemoved, IsEligibleSet, IsFinalizedSet, IsClosedSet, Is1155Set, RangeSet} from '../types/XStore/XStore'
 import {
   ZERO_BD,
   ZERO_BI,
@@ -25,7 +25,10 @@ export function handleNewVaultAdded(event: NewVaultAdded): void {
   vault.isFinalized = false
   vault.isClosed = false
   vault.flipEligOnRedeem = false
-  vault.allowMintRequests = false
+  vault.is1155 = false
+  vault.rangeStart = ZERO_BI
+  vault.rangeEnd = ZERO_BI
+
   vault.save()
 }
 
@@ -193,3 +196,29 @@ export function handleIsClosedSet(event: IsClosedSet): void {
   vault.save()
 }
 
+export function handleIs1155Set(event: Is1155Set): void {
+  log.info("\n\n============LOG=======================\n\n handleIs1155Set vaultId={},_is1155={}",
+            [event.params.vaultId.toString(), event.params._is1155 ? 'true' : 'false'])
+
+  let vault = Vault.load(event.params.vaultId.toString())
+  if(vault == null) {
+    return
+  }
+
+  vault.is1155 = event.params._is1155
+  vault.save()
+}
+
+export function handleRangeSet(event: RangeSet): void {
+  log.info("\n\n============LOG=======================\n\n handleRangeSet vaultId={},_rangeStart={},_rangeEnd={}",
+            [event.params.vaultId.toString(), event.params._rangeStart.toString(), event.params._rangeEnd.toString()])
+
+  let vault = Vault.load(event.params.vaultId.toString())
+  if(vault == null) {
+    return
+  }
+
+  vault.rangeStart = event.params._rangeStart
+  vault.rangeEnd = event.params._rangeEnd
+  vault.save()
+}

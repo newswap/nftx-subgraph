@@ -15,126 +15,6 @@
       },
       {
         "indexed": false,
-        "internalType": "bool",
-        "name": "isAllowed",
-        "type": "bool"
-      }
-    ],
-    "name": "AllowMintRequestsSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethBase",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethStep",
-        "type": "uint256"
-      }
-    ],
-    "name": "BurnFeesSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "_d2Asset",
-        "type": "address"
-      }
-    ],
-    "name": "D2AssetAddressSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "D2AssetSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "_d2Holdings",
-        "type": "uint256"
-      }
-    ],
-    "name": "D2HoldingsSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethBase",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethStep",
-        "type": "uint256"
-      }
-    ],
-    "name": "DualFeesSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
         "internalType": "uint256",
         "name": "_ethBalance",
         "type": "uint256"
@@ -212,11 +92,11 @@
       {
         "indexed": false,
         "internalType": "bool",
-        "name": "_isClosed",
+        "name": "_is1155",
         "type": "bool"
       }
     ],
-    "name": "IsClosedSet",
+    "name": "Is1155Set",
     "type": "event"
   },
   {
@@ -231,11 +111,11 @@
       {
         "indexed": false,
         "internalType": "bool",
-        "name": "_isD2Vault",
+        "name": "_isClosed",
         "type": "bool"
       }
     ],
-    "name": "IsD2VaultSet",
+    "name": "IsClosedSet",
     "type": "event"
   },
   {
@@ -318,31 +198,6 @@
       }
     ],
     "name": "ManagerSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethBase",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethStep",
-        "type": "uint256"
-      }
-    ],
-    "name": "MintFeesSet",
     "type": "event"
   },
   {
@@ -453,124 +308,17 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "requester",
-        "type": "address"
-      }
-    ],
-    "name": "RequesterSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
+        "name": "_rangeStart",
         "type": "uint256"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "id",
+        "name": "_rangeEnd",
         "type": "uint256"
       }
     ],
-    "name": "ReservesAdded",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      }
-    ],
-    "name": "ReservesRemoved",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "_bool",
-        "type": "bool"
-      }
-    ],
-    "name": "ShouldReserveSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "ethMax",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "length",
-        "type": "uint256"
-      }
-    ],
-    "name": "SupplierBountySet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "_tokenBalance",
-        "type": "uint256"
-      }
-    ],
-    "name": "TokenBalanceSet",
+    "name": "RangeSet",
     "type": "event"
   },
   {
@@ -863,101 +611,6 @@
         "internalType": "uint256",
         "name": "vaultId",
         "type": "uint256"
-      }
-    ],
-    "name": "reservesLength",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "elem",
-        "type": "uint256"
-      }
-    ],
-    "name": "reservesContains",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      }
-    ],
-    "name": "reservesAt",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      }
-    ],
-    "name": "requester",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
       },
       {
         "internalType": "uint256",
@@ -966,51 +619,6 @@
       }
     ],
     "name": "isEligible",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      }
-    ],
-    "name": "shouldReserve",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "allowMintRequests",
     "outputs": [
       {
         "internalType": "bool",
@@ -1070,6 +678,51 @@
         "type": "uint256"
       }
     ],
+    "name": "range",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "vaultId",
+        "type": "uint256"
+      }
+    ],
+    "name": "is1155",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "vaultId",
+        "type": "uint256"
+      }
+    ],
     "name": "isFinalized",
     "outputs": [
       {
@@ -1110,207 +763,7 @@
         "type": "uint256"
       }
     ],
-    "name": "mintFees",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "burnFees",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "dualFees",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "supplierBounty",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
     "name": "ethBalance",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "tokenBalance",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "isD2Vault",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "d2AssetAddress",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "d2Asset",
-    "outputs": [
-      {
-        "internalType": "contract IERC20",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function",
-    "constant": true
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "d2Holdings",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1447,65 +900,6 @@
       },
       {
         "internalType": "uint256",
-        "name": "elem",
-        "type": "uint256"
-      }
-    ],
-    "name": "reservesAdd",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "elem",
-        "type": "uint256"
-      }
-    ],
-    "name": "reservesRemove",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_requester",
-        "type": "address"
-      }
-    ],
-    "name": "setRequester",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
         "name": "id",
         "type": "uint256"
       },
@@ -1516,47 +910,6 @@
       }
     ],
     "name": "setIsEligible",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "id",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "_shouldReserve",
-        "type": "bool"
-      }
-    ],
-    "name": "setShouldReserve",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "isAllowed",
-        "type": "bool"
-      }
-    ],
-    "name": "setAllowMintRequests",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1593,6 +946,47 @@
       }
     ],
     "name": "setNegateEligibility",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "vaultId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_rangeStart",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_rangeEnd",
+        "type": "uint256"
+      }
+    ],
+    "name": "setRange",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "vaultId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_is1155",
+        "type": "bool"
+      }
+    ],
+    "name": "setIs1155",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1642,188 +1036,11 @@
       },
       {
         "internalType": "uint256",
-        "name": "ethBase",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "ethStep",
-        "type": "uint256"
-      }
-    ],
-    "name": "setMintFees",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "ethBase",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "ethStep",
-        "type": "uint256"
-      }
-    ],
-    "name": "setBurnFees",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "ethBase",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "ethStep",
-        "type": "uint256"
-      }
-    ],
-    "name": "setDualFees",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "ethMax",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "length",
-        "type": "uint256"
-      }
-    ],
-    "name": "setSupplierBounty",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
         "name": "_ethBalance",
         "type": "uint256"
       }
     ],
     "name": "setEthBalance",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_tokenBalance",
-        "type": "uint256"
-      }
-    ],
-    "name": "setTokenBalance",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "_isD2Vault",
-        "type": "bool"
-      }
-    ],
-    "name": "setIsD2Vault",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_d2Asset",
-        "type": "address"
-      }
-    ],
-    "name": "setD2AssetAddress",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      }
-    ],
-    "name": "setD2Asset",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "vaultId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_d2Holdings",
-        "type": "uint256"
-      }
-    ],
-    "name": "setD2Holdings",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

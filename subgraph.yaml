@@ -8,12 +8,12 @@ dataSources:
     name: XStore
     # testnet/mainnet
     network: testnet   
-    # testnet : 0xd7586cA51Ac9c1008C3eC94f999A1208E2F3e1B2  startBlock: 3853531
+    # testnet : 0x515F7baE5e34b30cE680d97857Fd9A4d9A8746dc  startBlock: 4637685
     # mainnet :   startBlock: 
     source:
-      address: '0xd7586cA51Ac9c1008C3eC94f999A1208E2F3e1B2'
+      address: '0x515F7baE5e34b30cE680d97857Fd9A4d9A8746dc'
       abi: XStore
-      startBlock: 3853531
+      startBlock: 4637685
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -57,3 +57,7 @@ dataSources:
           handler: handleIsFinalizedSet
         - event: IsClosedSet(indexed uint256,bool)
           handler: handleIsClosedSet
+        - event: Is1155Set(indexed uint256,bool)
+          handler: handleIs1155Set
+        - event: RangeSet(indexed uint256,uint256,uint256)
+          handler: handleRangeSet
